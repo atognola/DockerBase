@@ -39,8 +39,9 @@ RUN echo "[global]" >> /etc/pip.conf \
 
 ##SDK copy here
 ADD poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh /
-RUN /poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh -y \
-&& rm ./poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh
+# Distributing the image with the SDK still compressed is more lightweight. The entrypoint script will perform the SDK install.
+#RUN /poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh -y \
+#&& rm ./poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh
 
 ADD config.sh /usr/local/bin/.config.sh
 

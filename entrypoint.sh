@@ -22,6 +22,9 @@ else
     echo 'bash $HOME/.config.sh' >> /home/user/.bashrc
     echo "source /opt/poky/3.1.1/environment-setup-aarch64-poky-linux" >> /home/user/.bashrc
     
+    bash /poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh -y
+    rm /poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh
+    
     chown user:user -R ${HOME}
 
 fi
