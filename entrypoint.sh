@@ -20,6 +20,7 @@ else
 
     chmod +x ${HOME}/.config.sh && \
     echo 'bash $HOME/.config.sh' >> /home/user/.bashrc
+    echo "source /opt/poky/3.1.1/environment-setup-aarch64-poky-linux" >> /home/user/.bashrc
     
     chown user:user -R ${HOME}
 

@@ -38,9 +38,9 @@ RUN echo "[global]" >> /etc/pip.conf \
 && pip3 install -r py3-requirements.txt
 
 ##SDK copy here
-#ADD poky-glibc-x86_64-motion-image-minimal-aarch64-toolchain-2.4.2.sh /
-#RUN /poky-glibc-x86_64-motion-image-minimal-aarch64-toolchain-2.4.2.sh -y \
-#&& rm /poky-glibc-x86_64-motion-image-minimal-aarch64-toolchain-2.4.2.sh
+ADD poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh /
+RUN /poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh -y \
+&& rm ./poky-glibc-x86_64-rcar-image-minimal-aarch64-falcon-toolchain-3.1.1.sh
 
 ADD config.sh /usr/local/bin/.config.sh
 

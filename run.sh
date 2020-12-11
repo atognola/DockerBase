@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#bash ./config.sh
-
 sudo docker run -it --name falcon --network=host \
 -v $(pwd)/data:/data:Z \
 -v $HOME/.ssh:/home/user/.ssh:Z \
